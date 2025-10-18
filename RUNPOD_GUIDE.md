@@ -4,6 +4,7 @@
 
 ### 1. Clone Repository
 ```bash
+# Clone the repository (replace with your actual repo URL)
 git clone https://github.com/lkanghee366/hii.git
 cd hii
 ```
@@ -104,7 +105,8 @@ Add to your RunPod startup script:
 
 ```bash
 #!/bin/bash
-cd /workspace/hii
+# Navigate to your cloned repository directory
+cd /workspace/hii  # Adjust path to match your setup
 export TELEGRAM_BOT_TOKEN="your_token"
 export TELEGRAM_CHANNEL_ID="@yourchannel"
 nohup python upload_tele.py > /workspace/upload.log 2>&1 &

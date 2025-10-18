@@ -15,5 +15,3 @@ services:
       - ./output:/app/output
       # Mount log file
       - ./upload_tele.log:/app/upload_tele.log
-    # Optional: Run in the background
-    # command: python upload_tele.py
