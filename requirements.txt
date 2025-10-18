@@ -1,0 +1,7 @@
+# Telegram Image Upload Script Dependencies
+
+# Telegram Bot API
+python-telegram-bot==20.7
+
+# File system monitoring
+watchdog==3.0.0

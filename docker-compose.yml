@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  telegram-uploader:
+    build: .
+    container_name: telegram_image_uploader
+    restart: unless-stopped
+    environment:
+      - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
+      - TELEGRAM_CHANNEL_ID=${TELEGRAM_CHANNEL_ID}
+      - OUTPUT_FOLDER=/app/output
+      - CHECK_INTERVAL=5
+    volumes:
+      # Mount output folder from host
+      - ./output:/app/output
+      # Mount log file
+      - ./upload_tele.log:/app/upload_tele.log
